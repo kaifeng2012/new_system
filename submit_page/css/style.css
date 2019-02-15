@@ -1,0 +1,630 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    /*-webkit-appearance: none; //去掉浏览器默认样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a img {
+    border: none;
+    width: 102px;
+    height: 128px;
+    margin-top: 3px;
+}
+
+.top {
+    display: inline-block;
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.no_border {
+    border: 0 !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*首页*/
+
+.nav {
+    overflow: hidden;
+    background-color: #CCCCCC;
+    border-right: 0px solid #5c676d;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.nav li, .nav1 li, .nav2 li {
+    float: left;
+    border-right: 1px solid #999999;
+    width: 33.3%;
+    text-align: center;
+}
+
+ul .nav > li > a {
+    color: #000;
+    font-size: 18px;
+    line-height: 38px;
+    display: block;
+    padding: 5px 15px;
+}
+
+/*学校*/
+.text-left {
+    padding-left: 10px;
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*学校名称字体颜色*/
+.text-left .school-name {
+    color: #00B47D;
+}
+
+/*li左浮动*/
+.lf li {
+    display: inline-block;
+}
+
+.photo1 {
+    margin-left: 21px;
+}
+
+/*上传图片*/
+.file {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-picture {
+    border: 1px solid #ddd;
+}
+
+/*上传图片的大小*/
+.file-picture {
+    width: 102px;
+    height: 128px;
+    /*margin: auto;*/
+    margin-top: 22px;
+    margin-left: 15px;
+    margin-bottom: 14px;
+    background: #fff;
+}
+
+.file-picture img {
+    width: 102px;
+    height: 128px;
+}
+
+/*上传图片*/
+.pic {
+    float: left;
+    margin-left: 181px;
+    margin-bottom: -60px;
+    margin-top: -79px;
+}
+
+/*上传图片、拍照上传文本*/
+.new-contentarea label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 10px;
+    /*border: 1px solid #00B47D;*/
+    /*background:#00B47D;*/
+    color: #fff;
+    font-weight: normal;
+}
+
+.new-contentarea input[type=file] {
+    width: 188px;
+    height: 60px;
+    background: #333;
+    margin: 0 auto;
+    position: absolute;
+    right: 50%;
+    margin-right: -94px;
+    top: 0;
+    right /*\**/: 0px \9;
+    margin-right /*\**/: 0px \9;
+    width /*\**/: 10px \9;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 2;
+}
+
+/*拍照上传、上传照片链接去下划线*/
+.upload-img:focus, .upload-img:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+/*性别*/
+.genders input, .accommodations input {
+    width: 80px;
+    height: 33px;
+    border: 1px solid #BCBCBC;
+    line-height: 30px;
+    background-color: #fff;
+}
+
+.accommodations > input:first-child {
+    background-color: #00B47D;
+    color: #fff;
+}
+
+.genders > input:first-child {
+    background-color: #00B47D;
+    color: #fff;
+}
+
+/*性别男女背景色*/
+.text-left > .genders > input:focus, .text-left > .genders > input:hover {
+    background-color: #00B47D;
+    color: #fff;
+}
+
+/*验证码下外边距*/
+.code {
+    margin-bottom: 24px;
+}
+
+/*60s重新获取验证码*/
+.again-code {
+    position: absolute;
+    right: 31%;
+    width: 5%;
+}
+
+/*60s重新获取验证码的背景色、内边距、字体颜色*/
+.again-code .btn {
+    background: #AEAEAE;
+    padding: 3px 3px;
+    color: #fff;
+}
+
+/*点击60s重新获取验证码按钮时、字体颜色、边框颜色*/
+.again-code .btn.active.focus, .again-code .btn.active:focus, .again-code .btn.focus, .again-code .btn:active.focus, .again-code .btn:active:focus, .again-code .btn:focus {
+    outline: none outline-offset : - 2 px;
+    color: #fff;
+}
+
+/*开通i家校业务*/
+.start-service {
+    border-bottom: 0px solid #ddd;
+    margin-left: 27px;
+    margin-bottom: 7px;
+    /*position: relative;*/
+    top: 16px;
+}
+
+/*开通业务说明*/
+.txt {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    /*color: #949494;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #5EBF9F;
+
+}
+
+.txt span, .txt p {
+    font-size: 12px;
+    color: #5EBF9F;
+}
+
+/*免费试用*/
+.try-free {
+    margin-left: 35px;
+    line-height: 24px;
+}
+
+.picture {
+    margin-left: 17px;
+    float: left;
+}
+
+/*开通业务详情外边框*/
+.details-picture {
+    width: 94%;
+    background: rgba(219, 241, 235, 0.5);
+}
+
+/*开通i家校业务详情*/
+.details-txt {
+    /*display:none;*/
+    /*width:94%;*/
+    margin-top: 20px;
+    padding: 10px 0;
+    border: 3px solid #5EBF9F;
+
+}
+
+/*提交信息*/
+.submit-information input {
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 110px;
+    width: 87%;
+    border-radius: 5px;
+    background: #00B47D;
+    color: #fff;
+}
+
+/*请输入学生姓名*/
+.student-name {
+    /*color: #FF0000;*/
+    font-size: 16px;
+    text-align: center;
+}
+
+/*住宿：走读、住宿背景色*/
+.text-left > .accommodations > input:focus, .text-left > .accommodations > input:hover {
+    background-color: #00B47D;
+    color: #fff;
+}
+
+.details-picture img {
+    vertical-align: middle;
+    margin-top: -43px;
+    margin-left: 176px;
+}
+
+/*i家校业务详情高度*/
+.details-picture {
+    height: auto;
+}
+
+/***********继续完善页面*********/
+/*民族*/
+.nation-list {
+    color: #A9A9A9;
+}
+
+/*现居住地*/
+.address {
+    height: 100px;
+    /*line-height:100px;*/
+}
+
+/*选择省份右外边距*/
+#seachprov {
+    margin-right: -12px;
+}
+
+/*选择省份、市，上、左外边距*/
+.now-address-menu {
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 16px;
+}
+
+/*详细地址*/
+.detailAddress {
+    border: 1px solid #ddd;
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    left: -2px;
+    /* bottom: 10px; */
+    top: 51px;
+    padding-left: 5px;
+    width: 100%;
+    color: #333;
+}
+
+/*提交信息按钮定位*/
+.navbar-fixed-bottom {
+    bottom: 20px;
+}
+
+/********信息提交成功页面********/
+/*信息提交成功图标*/
+.text-center dt {
+    margin: 25px 0 25px 0;
+}
+
+dt > img {
+    width: 25%;
+}
+
+.text-center dt dd {
+    color: #00B47D;
+}
+
+.info-submitted-success {
+    color: #11CD6E;
+}
+
+/*重要提示边框宽度及颜色、居左、内边距、上外边距*/
+.text-center > .import-notice {
+    border: 1px solid #FF0000;
+    text-align: left;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+/*信息提交成功文本颜色*/
+.import-notice p, .import-notice p span {
+    color: #FF0000;
+}
+
+.import-notice > p:nth-child(2) {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+/**********信息提交失败**********/
+/*信息提交失败文本颜色*/
+.info-submitted-defeat {
+    color: #FF0000;
+}
+
+.submit-information:focus, .submit-information:hover {
+    color: transparent;
+    text-decoration: none;
+}
+
+/**********报到须知**************/
+/***左侧部分***/
+.aside-left {
+    margin-left: -67px;
+    float: left;
+}
+
+/*左侧的竖线*/
+#register-notes .aside-left .line {
+    padding: 15px 0;
+    margin-bottom: -10px;
+    border-left: 2px solid #63C19F;
+    margin-left: 100px;
+}
+
+.aside-left li span {
+    display: inline-block;
+    margin-bottom: -4px;
+    width: 100px;
+    height: 32px;
+    border-right: 2px solid #63C19F;
+}
+
+/***右侧部分***/
+.aside-right {
+    margin-left: 57px;
+    margin-top: 16px;
+}
+
+/*报名时间、招生对象、报名地址、报名所需提交材料*/
+.registration-time, .enrollment-target, .registration-address, .registration-material {
+    border: 2px solid #63C19F;
+    border-radius: 5px;
+    width: 87%;
+    padding: 10px;
+    line-height: 28px;
+    /*margin-bottom: 10px;*/
+}
+
+/*报名时间*/
+.registration-time {
+    margin-left: 21px;
+    position: relative;
+    top: 32px;
+}
+
+/*招生对象*/
+.enrollment-target {
+    margin-left: 21px;
+    position: relative;
+}
+
+/*报名地址*/
+.registration-address {
+    margin-left: 21px;
+    position: relative;
+    top: -61px;
+}
+
+/*报名所需提交材料*/
+.registration-material {
+    margin-left: 21px;
+    position: relative;
+    top: -121px;
+}
+
+/*报名时间、报名地址的图标*/
+.registration-time img, .registration-address img {
+    position: absolute;
+    top: 38%;
+    left: -41px;
+}
+
+/*招生对象、报名所需提交材料的图标*/
+.enrollment-target img, .registration-material img {
+    position: absolute;
+    top: 50%;
+    left: -41px;
+}
+
+/*报名时间、招生对象、报名地址、报名所需提交材料标题*/
+.registration-time h3, .enrollment-target h3, .registration-address h3, .registration-material h3 {
+    font-size: 21px;
+    color: #63C19F;
+    margin-bottom: 7px;
+}
+
+/*报名时间、招生对象、报名地址、报名所需提交材料文本*/
+.registration-time p, .enrollment-target p, .registration-address p, .registration-material p {
+    font-size: 14px;
+}
+
+/**********报到流程**************/
+
+/***左侧部分***/
+.aside-left {
+    margin-left: -67px;
+    float: left;
+}
+
+.aside-left li span {
+    display: inline-block;
+    margin-bottom: -5px;
+    width: 100px;
+    height: 32px;
+    border-right: 2px solid #434E4A;
+}
+
+/*左侧圆圈及圆圈中的文本*/
+.aside-left li i {
+    display: inline-block;
+    margin-left: 84px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #434E4A;
+    border-radius: 50%;
+    font-style: normal;
+    text-align: center;
+    line-height: 26px;
+    color: #E0750D;
+    /*font-weight:bold;*/
+    font-size: 20px;
+    background: #fff;
+}
+
+/***右侧部分***/
+.aside-right {
+    margin-left: 57px;
+    margin-top: 24px;
+}
+
+/*填报学生信息、查询分班名单、领取生活用品、办理走读证、分发军训物品*/
+.student-info, .divide-classes-list, .living-goods, .day-pass, .military-training-goods {
+    border: 2px solid #434E4A;
+    border-radius: 5px;
+    width: 87%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 21px;
+}
+
+/*填报学生信息*/
+.student-info {
+    position: relative;
+    top: 22px;
+}
+
+/*查询分班名单*/
+.divide-classes-list {
+    position: relative;
+    top: 71px;
+}
+
+/*领取生活用品*/
+.living-goods {
+    position: relative;
+    top: 89px;
+}
+
+/*办理走读证*/
+.day-pass {
+    position: relative;
+    top: 107px;
+}
+
+/*填报学生信息、查询分班名单、领取生活用品、办理走读证、分发军训物品左侧竖线*/
+#register-process .aside-left .line {
+    border-left: 2px solid #434E4A;;
+    margin-left: 100px;
+    padding-top: 15px;
+}
+
+/*分发军训物品*/
+.military-training-goods {
+    margin-left: 21px;
+    position: relative;
+    top: 126px;
+}
+
+/*领取生活用品、办理走读证、分发军训物品圆圈编号*/
+.thing, .pass, .goods {
+    position: absolute;
+    top: 36%;
+    left: -123px;
+    z-index: 10;
+}
+
+/*填报学生信息*/
+.info {
+    position: absolute;
+    top:37%;
+    left: -123px;
+}
+
+/*查询分班名单*/
+.list {
+    position: absolute;
+    top: 29%;
+    left: -123px;
+}
+
+/*********模态框**********/
+#myModal .modal-content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 214px;
+    width: 91%;
+    margin: 0 auto;
+}
+
+.modal-body p {
+    color: red;
+    /*text-align:center;*/
+}
+
+
+
+
+

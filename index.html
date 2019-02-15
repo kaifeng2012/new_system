@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>信息采集</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 兼容IE浏览器 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 兼容高速浏览模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入开发css-->
+    <link href="submit_page/css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <!--[if lt IE 9]>
+    <script src="bootstrap/js/html5shiv.min.js"></script>
+    <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        /*按钮获取焦点时*/
+        .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+            outline: thin;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+
+        /*底部导航*/
+        .nav {
+            height: 41px;
+        }
+    </style>
+</head>
+<body>
+<!--信息采集-->
+<div class="info-collect">
+    <!--头部-->
+    <img src="images/u2.png" class="img-responsive top">
+    <!--内容开始-->
+    <div class="content">
+        <form action="" id="myForm">
+            <ul class="text-center  file">
+                <!-- 拍照上传-->
+                <li class="new-contentarea">
+                    <a href="javascript:void(0)" class="upload-img">
+                        <label for="upload-file" id="upload-pic"><img src="images/pic.png" alt=""/></label>
+                    </a>
+                    <input type="file" class="" name="upload-file" id="upload-file" accept="image/*"/>
+                </li>
+            </ul>
+            <!--学校 -->
+            <ul class="text-left lf">
+                <li class="school"><img src="images/star.png"/>学校</li>
+                <li class="school-name">【郑州市第47高级中学】1.10班</li>
+            </ul>
+            <!--姓名-->
+            <ul class="text-left lf">
+                <li class="name"><img src="images/star.png"/>姓名</li>
+                <li class="input-student-name"><input name="studentName" type="text" placeholder="输入学生姓名"/></li>
+            </ul>
+            <!--性别-->
+            <ul class="text-left lf">
+                <li class="gender"><img src="images/star.png"/>性别</li>
+                <li class="genders"><input name="gender" type="button" value="男" id="man"/><input name="gender"
+                                                                                                  type="button"
+                                                                                                  value="女" id="woman"/>
+                </li>
+            </ul>
+            <!--住宿-->
+            <ul class="text-left lf">
+                <li class="accommodation"><img src="images/star.png"/>住宿</li>
+                <li class="accommodations"><input name="accommodation" type="button" value="住校"
+                                                  id="in-residence"/><input
+                        type="button"
+                        value="走读"
+                        name="accommodation" id="extern"/>
+                </li>
+            </ul>
+            <!--身份证号-->
+            <ul class="text-left lf">
+                <li class="ID-number"><img src="images/star.png"/>身份证号</li>
+                <li class="ID-number"><input name="idNumber" type="text" placeholder="输入身份证号"/></li>
+            </ul>
+            <!--手机号-->
+            <ul class="text-left lf">
+                <li class="cell-phone-number"><img src="images/star.png"/>手机号</li>
+                <li class="cell-phone-number"><input name="telNumber" type="tel" placeholder="输入家长手机号码" id="mobile"/>
+                </li>
+            </ul>
+            <!--验证码-->
+            <ul class="text-left lf code">
+                <li class="verification-code"><img src="images/star.png"/>验证码</li>
+                <li class="verification-code"><input name="noteCode" type="tel" placeholder="输入短信验证码"/></li>
+                <li class="again-code">
+                    <button class="btn">（60s)重新获取</button>
+                </li>
+            </ul>
+            <!--开通i家校业务-->
+            <div class="start-service">
+                <p class="school"><input type="checkbox" name="checkbox" checked/><span>&nbsp;同时开通"i家校业务"</span></p>
+
+                <div class="details-picture">
+                    <!--<img src="images/que.png" alt=""/>-->
+                    <div class="details-txt">
+                        <p class="txt">资费：5元/月</p>
+
+                        <div class="txt">
+                            <span>包含：开通后可以收到孩子出入校短信通知，</span>
+
+                            <p class="try-free">免费试用i家</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--验证-->
+            <div class="student-name"></div>
+            <!--提交信息-->
+            <div class="text-center">
+                <a href="javascript:" class="submit-information"><input type="button" value="提交信息" id="submit-info"
+                                                                        class="btn" data-toggle="modal"
+                                                                        data-target="#myModal"/></a>
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                                <h5 class="modal-title" id="myModalLabel" style="text-align:center;">提示信息</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>信息提交后无法修改，请确认无误</p>
+
+                                <p style="margin-left: -193px;">后提交</p>
+                            </div>
+                            <div class="modal-footer" style="text-align:center;">
+                                <button type="button" class="btn btn-primary" id="confirm-submit">确认提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"
+                                        style="padding: 6px 26px;">取消
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--内容结束-->
+        </form>
+    </div>
+</div>
+<!--报到须知-->
+<div id="register-notes" class="info-collect" style="display:none;">
+    <!--头部-->
+    <img src="images/baodaoxuzhi-1.png" class="img-responsive top">
+    <!--内容开始-->
+    <div class="content">
+        <!-- 左侧部分-->
+        <ul class="aside-left">
+            <li class="line" style="">
+                <!-- 招生对象-->
+                <div class="registration-time">
+                    <h3>招生对象：</h3>
+
+                    <p>原则上接受有郑州市内九区小学学籍或户籍，有综合素质报告手册的小学毕业生自愿报名
+                    原则上接受有郑州市内九区小学学籍或户籍，有综合素质报告手册的小学毕业生自愿报名
+                    原则上接受有郑州市内九区小学学籍或户籍，有综合素质报告手册的小学毕业生自愿报名
+                    原则上接受有郑州市内九区小学学籍或户籍，有综合素质报告手册的小学毕业生自愿报名</p>
+                    <img src="images/zhaoshengduixaing.png" alt=""/>
+                    <!--<i class="target" style="position: relative;left: -134px;top: -29px;"></i>-->
+                </div>
+            </li>
+            <!-- 报名时间-->
+            <li class="line" style="">
+                <div class="registration-time">
+                    <h3>报名时间：</h3>
+                    <p>6月14号-18号，每天8:00-18:00
+                    6月14号-18号，每天8:00-18:00
+                    6月14号-18号，每天8:00-18:00
+                    6月14号-18号，每天8:00-18:00</p>
+                    <img src="images/baomingshijian.png" alt=""/>
+                    <!--<i class="time" style="position: absolute;left: -123px;top: 10px;vertical-align: middle;background:url('images/baomingshijian.png') no-repeat center center;"></i>-->
+                </div>
+            </li>
+
+            <li class="line">
+                <!-- 报名地址-->
+                <div class="registration-time">
+                    <h3>报名地址：</h3>
+                    <p>郑州一中经开区实验学校（郑州市经开区南三环与第十五大街交叉口向南2000米路东，即经开十五大街与经南八路交叉口）</p>
+                    <img src="images/baomingdizhi.png" alt=""/>
+                </div>
+            </li>
+            <li class="line" style="">
+                <!-- 报名所需提交材料-->
+                <div class="registration-time">
+                    <h3>报名所需提交材料：</h3>
+                    <p>小学生综合素质评价手册的原件及复印件（复印件主要要五六年级的内容)
+                    学生近期同底板一寸免冠彩照三张
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）</p>
+                    <img src="images/baomingcailiao.png" alt=""/>
+                </div>
+            </li>
+            <li class="line" style="">
+                <!-- 报名所需提交材料-->
+                <div class="registration-time">
+                    <h3>报名所需提交材料：</h3>
+                    <p>小学生综合素质评价手册的原件及复印件（复印件主要要五六年级的内容）
+                    学生近期同底板一寸免冠彩照三张
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）</p>
+                    <img src="images/baomingcailiao.png" alt=""/>
+                </div>
+            </li>
+            <li class="line" style="">
+                <!-- 报名所需提交材料-->
+                <div class="registration-time">
+                    <h3>报名所需提交材料：</h3>
+                    <p>小学生综合素质评价手册的原件及复印件（复印件主要要五六年级的内容)
+                    学生近期同底板一寸免冠彩照三张
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本)
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）
+                    户口本和学生身份证的原件和复印件（没有身份证的可以只带户口本）</p>
+                    <img src="images/baomingcailiao.png" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--报到流程-->
+<div id="register-process" class="info-collect" style="display:none;">
+    <!--头部-->
+    <img src="images/baodaoliucheng-1.png" class="img-responsive top">
+    <!--内容开始-->
+    <div class="content">
+        <!-- 左侧部分-->
+        <ul class="aside-left">
+            <!-- 1填报学生信息-->
+            <li class="line" style="">
+                <div class="registration-time">
+                    <!--<h3>报名时间：</h3>-->
+                    <p>8月8日前，填报学生信息</p>
+                    <p>8月8日前，填报学生信息</p>
+                    <p>8月8日前，填报学生信息</p>
+                    <p>8月8日前，填报学生信息</p>
+                    <p>8月8日前，填报学生信息</p>
+                    <p class="info" style=""><i>1</i></p>
+                </div>
+            </li>
+            <!-- 3领取生活用品-->
+            <li class="line" style="">
+                <div class="registration-time">
+                    <p>凭缴费单到图书馆一楼阅览室领取生活用品，领取物品完毕后将缴费单下联交给班主任凭缴费单到图书馆一楼阅览室领取生活用品，领取物品完毕后将缴费单下联交给班主任凭缴费单到图书馆一楼阅览室领取生活用品，领取物品完毕后将缴费单下联交给班主任凭缴费单到图书馆一楼阅览室领取生活用品，领取物品完毕后将缴费单下联交给班主任凭缴费单到图书馆一楼阅览室领取生活用品，领取物品完毕后将缴费单下联交给班主任凭缴费单到图书馆一楼阅览室领取生活用品，领取物品完毕后将缴费单下联交给班主任</p>
+                    
+
+                    <p class="info"><i>2</i></p>
+                </div>
+            </li>
+            <!-- 2查询分班名单-->
+            <li class="line" style="">
+                <div class="registration-time" style="">
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+                    <p>8月11日查询分班名单</p>
+
+                    <p class="info"><i>3</i></p>
+                </div>
+            </li>
+
+            <!-- 4办理走读证-->
+            <li class="line" style="">
+                <div class="registration-time">
+                    <p>住宿生到宿舍按班主任分配好的床位整理内务，走读生请到团委办理走读证</p>
+
+                    <p class="info"><i>4</i></p>
+                </div>
+            </li>
+            <!-- 5分发军训物品-->
+            <li class="line" style="">
+                <div class="registration-time">
+                    <p>15:40全体学生在本班教室集中，分发军训教材、军训服装</p>
+
+                    <p class="info"><i>5</i></p>
+                    <!--<p class="goods" style="position: absolute;top: 38%;left: -123px;"><i>5</i></p>-->
+                </div>
+            </li>
+            <li class="line" style="">
+                <div class="registration-time">
+                    <p>15:40全体学生在本班教室集中，分发军训教材、军训服装</p>
+
+                    <p class="info"><i>6</i></p>
+                    <!--<p class="goods" style="position: absolute;top: 38%;left: -123px;"><i>5</i></p>-->
+                </div>
+            </li>
+            <li class="line" style="">
+                <div class="registration-time">
+                    <p>15:40全体学生在本班教室集中，分发军训教材、军训服装</p>
+
+                    <p class="info"><i>7</i></p>
+                    <!--<p class="goods" style="position: absolute;top: 38%;left: -123px;"><i>5</i></p>-->
+                </div>
+            </li>
+            <li class="line" style="">
+                <div class="registration-time">
+                    <p>15:40全体学生在本班教室集中，分发军训教材、军训服装15:40全体学生在本班教室集中，分发军训教材、军训服装15:40全体学生在本班教室集中，分发军训教材、军训服装15:40全体学生在本班教室集中，分发军训教材、军训服装15:40全体学生在本班教室集中，分发军训教材、军训服装</p>
+                   
+         
+                    <p class="info"><i>8</i></p>
+                    <!--<p class="goods" style="position: absolute;top: 38%;left: -123px;"><i>5</i></p>-->
+                </div>
+            </li>
+           
+        </ul>
+    </div>
+</div>
+<!--底部nav-->
+<ul class="nav">
+    <li class="active"><a href="javascript:;">信息采集</a></li>
+    <li class="registration-notice"><a href="javascript:;">报到须知</a></li>
+    <li class="registration-process"><a class="red" href="javascript:;">报到流程</a></li>
+</ul>
+<script src="bootstrap/js/jquery-1.11.3.js"></script>
+<!--Bootstrap的插件文件 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/new_year/new_year.js"></script>
+<script src="js/common/common.js"></script>
+<script>
+
+</script>
+</body>
+</html>
